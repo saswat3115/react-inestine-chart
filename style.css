@@ -1,0 +1,16 @@
+h1,
+p {
+  font-family: Lato;
+}
+
+/* .svg-path {
+  transition: all 0.2s ease-in-out;
+} */
+
+svg path,
+svg rect,
+svg text {
+  transition: 1s ease-in-out;
+  cursor: pointer;
+  font-family: sans-serif;
+}
