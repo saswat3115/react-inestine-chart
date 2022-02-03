@@ -3,6 +3,7 @@ import { render } from 'react-dom';
 import Hello from './Hello';
 import './style.css';
 import Chart from './Chart';
+import StockChart from './StockChart';
 
 const data = {
   EXPENSE: {
@@ -43,14 +44,15 @@ class App extends Component<AppProps, AppState> {
   render() {
     return (
       <div style={{ padding: '20px' }}>
-        <Chart
+        {/* <Chart
           data={data}
           radius={200}
           active=""
           width={24}
           borderWidth={4}
           gap={35}
-        />
+        /> */}
+        <StockChart />
       </div>
     );
   }
