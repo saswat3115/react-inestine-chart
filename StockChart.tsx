@@ -31,7 +31,8 @@ const options = {
     marker: {
       enabled: false,
       color: '#E54F6D',
-      radius: 2,
+      lineWidth: 2,
+      // radius: 2,
       states: {
         hover: {
           enabled: true,
@@ -44,6 +45,12 @@ const options = {
     {
       data: [1, 2, 3, 2, 5, 1, 3, 4, 4, 3, 5, 6, 6, 7],
       type: 'area',
+      marker: {
+        fillColor: '#FFFFFF',
+        radius: 4,
+        lineWidth: 1,
+        lineColor: null, // inherit from series
+      },
       fillColor: {
         linearGradient: [0, 0, 0, 300],
         stops: [
