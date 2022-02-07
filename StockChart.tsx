@@ -8,7 +8,7 @@ function getRandomArbitrary(min, max) {
 
 function getData(days) {
   var data = [];
-  for (let i = 1; i < days; i++) {
+  for (let i = 0; i < days; i++) {
     data.push(getRandomArbitrary(500, 5000));
   }
   return data;
@@ -17,22 +17,34 @@ function getData(days) {
 const options = {
   chart: {
     zoomType: 'x',
-    minWidth: 1200,
+    height: '250px',
+    scrollablePlotArea: {
+      minWidth: 700,
+      scrollPositionX: 1,
+    },
   },
+  credits: {
+    enabled: false,
+  },
+  colors: ['E54F6D'],
   title: {
-    text: 'My chart',
+    text: '',
   },
   xAxis: {
-    // categories: ['a', 'b', 'c', 'd', 'e', 'f'],
+    // categories: [], // ['01', '02', '03', '04', '05', '06', '07', '08'],
     title: {
-      text: 'Date',
+      text: '',
     },
+    tickInterval: 1,
+    gridLineWidth: 0,
+    lineColor: 'transparent',
   },
   yAxis: {
     min: 0,
     title: {
-      text: 'Investment',
+      text: '',
     },
+    gridLineWidth: 0,
   },
   plotOptions: {
     series: {
@@ -56,18 +68,19 @@ const options = {
   },
   series: [
     {
-      data: getData(60), // [1, 2, 3, 2, 5, 1, 3, 4, 4, 3, 5, 6, 6, 7],
+      data: getData(60), // [2200, 3000, 1800, 3600, 4000, 3800, 3900, 2700],
       type: 'area',
       marker: {
         fillColor: '#FFFFFF',
-        radius: 4,
+        radius: 3,
         lineWidth: 1,
         lineColor: null, // inherit from series
       },
+      showInLegend: false,
       fillColor: {
         linearGradient: [0, 0, 0, 300],
         stops: [
-          [0, '#E54F6D'],
+          [0, '#f8d3da'],
           [1, 'white'],
         ],
       },
