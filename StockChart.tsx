@@ -2,15 +2,28 @@ import React from 'react';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 
+function getRandomArbitrary(min, max) {
+  return Math.random() * (max - min) + min;
+}
+
+function getData(days) {
+  var data = [];
+  for (let i = 1; i < days; i++) {
+    data.push(getRandomArbitrary(500, 5000));
+  }
+  return data;
+}
+
 const options = {
   chart: {
     zoomType: 'x',
+    minWidth: 1200,
   },
   title: {
     text: 'My chart',
   },
   xAxis: {
-    categories: ['a', 'b', 'c', 'd', 'e', 'f'],
+    // categories: ['a', 'b', 'c', 'd', 'e', 'f'],
     title: {
       text: 'Date',
     },
@@ -43,7 +56,7 @@ const options = {
   },
   series: [
     {
-      data: [1, 2, 3, 2, 5, 1, 3, 4, 4, 3, 5, 6, 6, 7],
+      data: getData(60), // [1, 2, 3, 2, 5, 1, 3, 4, 4, 3, 5, 6, 6, 7],
       type: 'area',
       marker: {
         fillColor: '#FFFFFF',
