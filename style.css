@@ -15,7 +15,7 @@ svg text {
   font-family: sans-serif;
 }
 
-.svg-path {
+.circle {
   animation: progress 1s ease-out forwards;
 }
 
