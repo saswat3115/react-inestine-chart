@@ -96,6 +96,7 @@ const Chart = ({ active, data, radius, borderWidth, gap, width }: Props) => {
               <path
                 fill="none"
                 className="svg-path"
+                stroke-dasharray="60, 100"
                 d={describeArc(center, center, r, 0, actualInPercentCartisian)}
                 strokeLinecap="round"
                 stroke={!isActive ? data[item].color : '#45A6FF'}

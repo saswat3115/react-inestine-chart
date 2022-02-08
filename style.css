@@ -14,3 +14,13 @@ svg text {
   cursor: pointer;
   font-family: sans-serif;
 }
+
+.svg-path {
+  animation: progress 1s ease-out forwards;
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
