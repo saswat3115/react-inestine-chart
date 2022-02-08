@@ -16,10 +16,10 @@ const Intestine = (props) => {
   return (
     <svg viewBox={`0 0 ${H} ${W}`} className="circular-chart">
       {Object.keys(data).map((item, index) => {
-        const fillPercentage = (data[item].actual / data[item].estimated) * 100;
+        let fillPercentage = (data[item].actual / data[item].estimated) * 100;
 
-        const maxArcPercentage = (data[item].maxAngle / 360) * 100;
-        const fillArcPercentage = (maxArcPercentage * fillPercentage) / 100;
+        let maxArcPercentage = (data[item].maxAngle / 360) * 100;
+        let fillArcPercentage = (maxArcPercentage * fillPercentage) / 100;
 
         return (
           <g key={item}>

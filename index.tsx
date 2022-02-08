@@ -23,14 +23,14 @@ const data = {
     estimated: 100000,
     actual: 80000,
     color: '#F8C630',
-    maxAngle: 120,
-  },
-  INVEST: {
-    estimated: 25000,
-    actual: 22000,
-    color: '#45A6FF',
     maxAngle: 90,
   },
+  // INVEST: {
+  //   estimated: 25000,
+  //   actual: 22000,
+  //   color: '#45A6FF',
+  //   maxAngle: 90,
+  // },
 };
 
 interface AppProps {}
