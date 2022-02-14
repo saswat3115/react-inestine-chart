@@ -90,13 +90,15 @@ const options = {
   series: [
     {
       data: getData(60).data, // [2200, 3000, 1800, 3600, 4000, 3800, 3900, 2700],
-      type: 'area',
+      // type: 'area',
+      type: 'areaspline',
       // pointInterval: 24 * 3600 * 1000,
       marker: {
-        fillColor: '#FFFFFF',
-        radius: 3,
-        lineWidth: 1,
-        lineColor: null, // inherit from series
+        // enable: false,
+        fillColor: 'transparent',
+        // radius: 3,
+        // lineWidth: 1,
+        // lineColor: null, // inherit from series
       },
       showInLegend: false,
       fillColor: {

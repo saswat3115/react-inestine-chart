@@ -57,8 +57,8 @@ class App extends Component<AppProps, AppState> {
           borderWidth={4}
           gap={35}
         /> */}
-        {/* <StockChart /> */}
-        <Intestine data={data} width={3} borderWidth={1} gap={2} />
+        <StockChart />
+        {/* <Intestine data={data} width={3} borderWidth={1} gap={2} /> */}
       </div>
     );
   }
